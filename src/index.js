@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       <div>
         <h1>Hello World</h1>
         <Link to="register">Register</Link>
-        <Link to="profile">Login</Link>
+        <Link to="login">Login</Link>
       </div>
     ),
   },
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
-    path: "profile",
+    path: "login",
     element: <Login />,
   },
 ]);

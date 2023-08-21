@@ -45,3 +45,15 @@ hr {
   border-top: 1px solid #000;
   margin: 1rem;
 }
+
+.forgot-password a {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forgot-password a {
+  color: #383737;
+  text-decoration: none;
+  font-size: 0.9rem;
+}

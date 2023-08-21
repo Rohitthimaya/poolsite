@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Register = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -26,6 +27,9 @@ const Register = () => {
           placeholder="Password"
           required
         />
+        <div className="forgot-password">
+          <Link to="/forgot-password">Forgot password?</Link>
+        </div>
       </div>
       <button className="button-container">Login</button>
       <hr />
@@ -34,4 +38,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;
