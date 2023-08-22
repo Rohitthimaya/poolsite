@@ -10,7 +10,8 @@ import {
 } from "react-router-dom";
 import Register from "./components/User/Register";
 import Login from "./components/User/Login";
-import Home from "./components/Home/Home"
+import Home from "./components/Home/Home";
+import Profile from "./components/User/Profile";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
         <Link to="home">Home</Link>
         <Link to="register">Register</Link>
         <Link to="login">Login</Link>
+        <Link to="profile">Profile</Link>
       </div>
     ),
   },
@@ -35,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "home",
     element: <Home />,
+  },
+  {
+    path: "profile",
+    element: <Profile />,
   },
 ]);
 
