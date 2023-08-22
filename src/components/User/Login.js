@@ -33,7 +33,11 @@ const Login = () => {
       </div>
       <button className="button-container">Login</button>
       <hr />
-      <button className="button-container">Sign Up</button>
+      <button className="button-container">
+        <Link to="/register" className="button-link">
+          Sign Up
+        </Link>
+      </button>
     </div>
   );
 };

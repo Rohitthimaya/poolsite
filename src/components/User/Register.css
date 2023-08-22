@@ -39,6 +39,11 @@ h2 {
   width: 10%;
 }
 
+.button-link {
+  text-decoration: none;
+  color: #000;
+}
+
 hr {
   width: 15%;
   border: 0;

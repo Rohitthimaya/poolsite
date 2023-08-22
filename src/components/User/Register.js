@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Register.css";
 
 const Register = () => {
@@ -52,7 +53,11 @@ const Register = () => {
       </div>
       <button className="button-container">Sign Up</button>
       <hr />
-      <button className="button-container">Login</button>
+      <button className="button-container">
+        <Link to="/login" className="button-link">
+          Login
+        </Link>
+      </button>
     </div>
   );
 };
