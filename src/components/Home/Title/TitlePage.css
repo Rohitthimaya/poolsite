@@ -1,0 +1,25 @@
+/* TitlePage.css */
+.title-page {
+    background-image: url('bc-image.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .title-content {
+    text-align: center;
+  }
+  
+  .title-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .title-content p {
+    font-size: 1.5rem;
+  }
+  
