@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Register from "./components/User/Register";
 import Login from "./components/User/Login";
+import ForgotPassword from "./components/User/ForgotPassword";
 import Home from "./components/Home/Home";
 import Profile from "./components/User/Profile";
 import PoolHistory from "./components/Pool/PoolHistory";
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
         <Link to="home">Home</Link>
         <Link to="register">Register</Link>
         <Link to="login">Login</Link>
+        <Link to="forgot-password">Forgot Password</Link>
         <Link to="profile">Profile</Link>
         <Link to="pool-history">Pool History</Link>
       </div>
@@ -35,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Login />,
+  },
+  {
+    path: "forgot-password",
+    element: <ForgotPassword />,
   },
   {
     path: "home",
