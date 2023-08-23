@@ -12,6 +12,7 @@ import Register from "./components/User/Register";
 import Login from "./components/User/Login";
 import Home from "./components/Home/Home";
 import Profile from "./components/User/Profile";
+import PoolHistory from "./components/Pool/PoolHistory";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
         <Link to="register">Register</Link>
         <Link to="login">Login</Link>
         <Link to="profile">Profile</Link>
+        <Link to="pool-history">Pool History</Link>
       </div>
     ),
   },
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "profile",
     element: <Profile />,
+  },
+  {
+    path: "pool-history",
+    element: <PoolHistory />,
   },
 ]);
 
