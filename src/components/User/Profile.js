@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Register.css";
+import "./Profile.css";
 
-const Register = () => {
+const Profile = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [number, setNumber] = useState("");
 
   return (
-    <div className="container">
-      <h2>Account Registration</h2>
+    <div className="profile-container">
+      <h2>Profile</h2>
       <div className="input-container">
         <label>Name</label>
         <input
@@ -51,15 +50,9 @@ const Register = () => {
           required
         />
       </div>
-      <button className="button-container">Sign Up</button>
-      <hr />
-      <button className="button-container">
-        <Link to="/login" className="button-link">
-          Login
-        </Link>
-      </button>
+      <button className="button-container">Save</button>
     </div>
   );
 };
 
-export default Register;
+export default Profile;
