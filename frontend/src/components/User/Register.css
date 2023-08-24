@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #92a4a4;
+  font-family: "Roboto";
+}
+
+h2 {
+  margin-top: 20rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.input-container {
+  margin-bottom: 1.5rem;
+}
+
+.input-container input,
+.button-container {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #d9d9d9;
+}
+
+.input-container input {
+  padding-left: 15px;
+}
+
+.input-container label {
+  position: absolute;
+  opacity: 0;
+}
+
+.button-container {
+  width: 10%;
+}
+
+.button-link {
+  text-decoration: none;
+  color: #000;
+}
+
+hr {
+  width: 15%;
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 1rem;
+}
+
+.forgot-password a {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forgot-password a {
+  color: #383737;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
