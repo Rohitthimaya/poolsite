@@ -2,10 +2,6 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
-    user_id = models.AutoField(primary_key=True)
-    username = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
-    password = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=15, blank=True)
     points = models.IntegerField(default=0)
 
@@ -18,7 +14,6 @@ class Pool(models.Model):
         ('finished', 'Finished'),
     ]
 
-    pool_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     ticket_cost = models.DecimalField(max_digits=10),
     start_date = models.DateTimeField()
@@ -29,7 +24,6 @@ class Pool(models.Model):
         return self.name
 
 class Participant(models.Model):
-    participant_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     pool = models.ForeignKey(Pool, on_delete=models.CASCADE)
     entering_date = models.DateTimeField(auto_now_add=True)
@@ -38,7 +32,6 @@ class Participant(models.Model):
         return f"Participant {self.participant_id}"
 
 class Winners(models.Model):
-    winner_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     pool = models.ForeignKey(Pool, on_delete=models.CASCADE)
     winning_date = models.DateTimeField()
