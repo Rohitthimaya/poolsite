@@ -1,12 +1,27 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Register.css";
+import axios from "axios"; // Import axios for API calls
+import "./Register.css"
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [number, setNumber] = useState("");
+
+  const handleRegister = async () => {
+    try {
+      const response = await axios.post("/api/register/", {
+        username: name,
+        email: email,
+        password: password,
+        phone_number: number,
+      });
+      console.log(response.data); // Display the response, you can also redirect to login
+    } catch (error) {
+      console.error("Registration error:", error);
+    }
+  };
 
   return (
     <div className="container">
@@ -51,7 +66,9 @@ const Register = () => {
           required
         />
       </div>
-      <button className="button-container">Sign Up</button>
+      <button className="button-container" onClick={handleRegister}>
+      Sign Up
+    </button>
       <hr />
       <button className="button-container">
         <Link to="/login" className="button-link">

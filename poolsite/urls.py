@@ -17,8 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
+from . import views
+from poolsite.views import register_view, login_view
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', TemplateView.as_view(template_name='index.html')),
+    path('register/', TemplateView.as_view(template_name='index.html')),  # Adjust the template name if needed
+    path('login/', TemplateView.as_view(template_name='index.html')),  
+    # Other URL patterns
 ]

@@ -1,9 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import "./Register.css"
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post("/api/login/", {
+        username: email,
+        password: password,
+      });
+      console.log(response.data); // Display the response, you can also redirect to a dashboard
+    } catch (error) {
+      console.error("Login error:", error);
+    }
+  };
 
   return (
     <div className="container">
@@ -31,7 +45,9 @@ const Login = () => {
           <Link to="/forgot-password">Forgot password?</Link>
         </div>
       </div>
-      <button className="button-container">Login</button>
+      <button className="button-container" onClick={handleLogin}>
+      Login
+    </button>
       <hr />
       <button className="button-container">
         <Link to="/register" className="button-link">

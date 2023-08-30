@@ -11,7 +11,7 @@ import {
 import Register from "./components/User/Register";
 import Login from "./components/User/Login";
 import ForgotPassword from "./components/User/ForgotPassword";
-import Home from "./components/Home/Home";
+import Home from "./components/Home/";
 import Profile from "./components/User/Profile";
 import PoolHistory from "./components/Pool/PoolHistory";
 
