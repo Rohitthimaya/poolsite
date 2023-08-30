@@ -1,6 +1,13 @@
+from rest_framework import viewsets, status
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
+from .models import CustomUser
+from .serializers import CustomUserSerializer
+
+class CustomUserViewSet(viewsets.ModelViewSet):
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer
 
 def register_view(request):
     if request.method == 'POST':
