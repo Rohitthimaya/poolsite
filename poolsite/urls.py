@@ -18,11 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from . import views
-from rest_framework import routers
 from poolsite.views import register_view, login_view
+from rest_framework.routers import DefaultRouter
 from .views import CustomUserViewSet
 
-router = routers.DefaultRouter()
+router = DefaultRouter()
 router.register(r'users', CustomUserViewSet)
 
 urlpatterns = [

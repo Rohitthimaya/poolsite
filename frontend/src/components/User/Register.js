@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios"; // Import axios for API calls
-import "./Register.css"
+import "./Register.css";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -11,7 +11,7 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post("/api/register/", {
+      const response = await axios.post("/api/users/", {
         username: name,
         email: email,
         password: password,
@@ -67,8 +67,8 @@ const Register = () => {
         />
       </div>
       <button className="button-container" onClick={handleRegister}>
-      Sign Up
-    </button>
+        Sign Up
+      </button>
       <hr />
       <button className="button-container">
         <Link to="/login" className="button-link">
